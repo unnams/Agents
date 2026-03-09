@@ -4,7 +4,8 @@ from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
 import sys
-import asyncio
+
+
 
 
 load_dotenv()
@@ -89,21 +90,17 @@ Expense Approval System
         return f"Processing failed: {e}"
 
 
+
 if __name__ == "__main__":
-    print("Starting MCP Expense Approval Server...", file=sys.stderr)
-
-    try:
-        asyncio.run(mcp.run())
-    except RuntimeError:
-        loop = asyncio.get_event_loop()
-        loop.run_until_complete(mcp.run())
-
+    print("Starting Expense Approval MCP Server...", file=sys.stderr)
+    mcp.run(transport="stdio")
 
 
 # if __name__ == "__main__":
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
