@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "Expense Approval Service": {
-      "command": "python",
-      "args": ["agent.py"]
-    }
-  }
-}
