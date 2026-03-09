@@ -88,14 +88,15 @@ Expense Approval System
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
 
-async def main():
-    await mcp.run_async(transport="http", host="0.0.0.0", port=8000)
-    # ... your existing process_expense function ...
 
-async def main():  # ← ADD THIS
-    await mcp.run_async()
+if __name__ == "__main__":
+    print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
-    
+    try:
+        asyncio.run(mcp.run())
+    except RuntimeError:
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(mcp.run())
 
 
 
@@ -103,5 +104,6 @@ async def main():  # ← ADD THIS
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
