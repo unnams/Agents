@@ -76,9 +76,14 @@ Kindly review and approve.
 Regards,
 Expense Approval System
 """
-
-        # Send Email
-        email_status = send_email(approver_email, subject, body)
+email_status = await asyncio.to_thread(
+            send_email,
+            approver_email,
+            subject,
+            body
+        )
+        # # Send Email
+        # email_status = send_email(approver_email, subject, body)
 
         return f"Expense sent to {approver_role} ({approver_email}). Status: {email_status}"
 
@@ -97,6 +102,7 @@ Expense Approval System
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
