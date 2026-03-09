@@ -3,6 +3,7 @@ import smtplib
 from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
+from fastapi import FastAPI
 import sys
 import asyncio
 load_dotenv()
@@ -90,7 +91,11 @@ Expense Approval System
     except Exception as e:
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
-app = mcp
+
+
+app = FastAPI()
+app.mount("/", mcp)
+
 
 
 
@@ -103,6 +108,7 @@ app = mcp
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
