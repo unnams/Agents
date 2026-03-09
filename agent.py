@@ -90,7 +90,7 @@ Expense Approval System
     except Exception as e:
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
-app = mcp.asgi_app()
+app = mcp
 
 
 
@@ -103,6 +103,7 @@ app = mcp.asgi_app()
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
