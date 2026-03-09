@@ -4,7 +4,8 @@ from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
 import sys
-#https://github.com/unnams/Agentic.git
+
+
 
 load_dotenv()
 
@@ -88,6 +89,7 @@ Expense Approval System
         return f"Processing failed: {e}"
 
 
-if __name__ == "__main__":
-    print("Starting MCP Expense Approval Server...", file=sys.stderr)
-    mcp.run()
+# if __name__ == "__main__":
+#     print("Starting MCP Expense Approval Server...", file=sys.stderr)
+
+#     mcp.run()
