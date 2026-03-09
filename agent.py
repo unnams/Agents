@@ -94,16 +94,15 @@ Expense Approval System
 
 
 
-print("Starting Expense Approval MCP Server...", file=sys.stderr)
-loop = asyncio.get_event_loop()
-loop.create_task(mcp.run(transport="stdio"))
-loop.run_forever()
+
+
 
 
 # if __name__ == "__main__":
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
