@@ -4,12 +4,7 @@ from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
 import sys
-
-
-
-
-
-
+import asyncio
 load_dotenv()
 
 mcp = FastMCP("Expense Approval Service")
@@ -48,7 +43,7 @@ def send_email(to: str, subject: str, body: str):
 
 # MCP Tool
 @mcp.tool()
-def process_expense(employee: str, amount: float, purpose: str):
+async def  process_expense(employee: str, amount: float, purpose: str):
     try:
         print("Processing expense...", file=sys.stderr)
 
@@ -102,6 +97,7 @@ Expense Approval System
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
