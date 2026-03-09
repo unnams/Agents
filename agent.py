@@ -91,15 +91,16 @@ Expense Approval System
 
 
 
-if __name__ == "__main__":
-    print("Starting Expense Approval MCP Server...", file=sys.stderr)
-    mcp.run(transport="stdio")
+
+print("Starting Expense Approval MCP Server...", file=sys.stderr)
+mcp.run(transport="stdio")
 
 
 # if __name__ == "__main__":
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
