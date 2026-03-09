@@ -93,7 +93,7 @@ async def main():
     # ... your existing process_expense function ...
 
 async def main():  # ← ADD THIS
-    await mcp.run_async(
+    await mcp.run_async()
 
     
 
@@ -103,4 +103,5 @@ async def main():  # ← ADD THIS
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
