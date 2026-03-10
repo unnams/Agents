@@ -93,8 +93,8 @@ Expense Approval System
         return f"Processing failed: {e}"
 
 
-# app = FastAPI()
-# app.mount("/", mcp)
+app = FastAPI()
+app.mount("/", mcp)
 
 
 
@@ -108,6 +108,7 @@ Expense Approval System
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
