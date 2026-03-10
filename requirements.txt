@@ -1,7 +1,7 @@
 fastmcp
 python-dotenv
-mcp
 asyncio
+
 
 
 
