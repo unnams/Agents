@@ -1,3 +1,5 @@
 fastmcp
 python-dotenv
+mcp
+
 
