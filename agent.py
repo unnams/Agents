@@ -88,6 +88,9 @@ Expense Approval System
     except Exception as e:
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
+if __name__ == "__main__":
+    server.run(transport="sse")
+
 
 
 
