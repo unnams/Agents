@@ -4,14 +4,8 @@ from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
 import sys
-import asyncio
 load_dotenv()
-from starlette.applications import Starlette
-from starlette.routing import Mount
-
-app = Starlette(routes=[Mount("/", app=mcp.router)])
-
-mcp = FastMCP("Expense Approval Service")
+server = FastMCP("Expense Approval Service")
 
 # Approver Emails
 APPROVERS = {
@@ -46,7 +40,7 @@ def send_email(to: str, subject: str, body: str):
 
 
 # MCP Tool
-@mcp.tool()
+@server.tool()
 async def  process_expense(employee: str, amount: float, purpose: str):
     try:
         print("Processing expense...", file=sys.stderr)
@@ -94,7 +88,6 @@ Expense Approval System
     except Exception as e:
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
-app = Starlette(routes=[Mount("/", app=mcp.router)])
 
 
 
@@ -105,10 +98,12 @@ app = Starlette(routes=[Mount("/", app=mcp.router)])
 
 
 
-# if __name__ == "__main__":
-#     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
-#     mcp.run()
+
+
+
+
+
 
 
 
