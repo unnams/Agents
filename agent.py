@@ -3,7 +3,7 @@ import smtplib
 from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
-# from fastapi import FastAPI
+from fastapi import FastAPI
 import sys
 import asyncio
 load_dotenv()
@@ -108,6 +108,7 @@ app.mount("/", mcp)
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
