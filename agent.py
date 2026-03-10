@@ -89,7 +89,8 @@ Expense Approval System
     except Exception as e:
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
-nest_asyncio.apply()
+print([x for x in dir(server) if not x.startswith('_')], file=sys.stderr)
+
 
 
 
