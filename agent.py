@@ -4,6 +4,7 @@ from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
 import sys
+import asyncio
 load_dotenv()
 server = FastMCP("Expense Approval Service")
 
@@ -88,7 +89,8 @@ Expense Approval System
     except Exception as e:
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
-app = server.sse_app()
+
+
 
 
 
