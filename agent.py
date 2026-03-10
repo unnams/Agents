@@ -90,7 +90,7 @@ Expense Approval System
     except Exception as e:
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
-app = mcp.streamable_http_app()
+app = mcp.sse_app()
 
 
 
@@ -105,6 +105,7 @@ app = mcp.streamable_http_app()
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 
 #     mcp.run()
+
 
 
 
