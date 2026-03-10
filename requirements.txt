@@ -1,5 +1,6 @@
 fastmcp
 python-dotenv
 mcp
+nest_asyncio
 
 
