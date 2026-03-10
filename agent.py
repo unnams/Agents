@@ -11,8 +11,8 @@ server = FastMCP("Expense Approval Service")
 # Approver Emails
 APPROVERS = {
     "Manager": "pranathip029@gmail.com",
-    "Director": "mahidhark2003@gmail.com",
-    "CFO":     "praneethunnam@gmail.com"
+    "Director": "shabreen.taj@brainbox.consulting",
+    "CFO":     "unnam.pranathi@brainbox.consulting"
 }
 
 
@@ -89,6 +89,7 @@ Expense Approval System
     except Exception as e:
         print("Processing error:", e, file=sys.stderr)
         return f"Processing failed: {e}"
+
 
 
 
